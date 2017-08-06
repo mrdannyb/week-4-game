@@ -1,12 +1,17 @@
 $(document).ready(function() {
 	var targetNumber;
-	var counter = 0;
+	var counter;
 	var values = [];
+	var wins;
+	var losses;
+	
 
 	function readyNumber() {
 		targetNumber = Math.floor((Math.random() * 50) + 19);
 		$(".target-score").html(targetNumber);
 		setValues();
+		counter = 0;
+		$(".score-space").html(counter);
 	};
 
 	function setValues() {
@@ -21,5 +26,14 @@ $(document).ready(function() {
 	};
 
 	readyNumber();
+
+	$(".crystal").on("click", function() {
+		var crystalValue = ($(this).attr("value"));
+		crystalValue = parseInt(crystalValue);
+		console.log(crystalValue);
+		console.log(counter);
+		counter += crystalValue;
+		$(".score-space").html(counter);
+	});
 
 })	
