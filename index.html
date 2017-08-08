@@ -9,33 +9,40 @@
     <script type="text/javascript" src="assets/javascript/game.js"></script>
   </head>
   <body>
-    <div class="title">
-      <h1>Crystals Collector!</h1>    
-    </div>
-    <div class="directions">
-    	<p>You will be given a random number at the start of the game.</p>
-    	<br>
-    	<p>Click one of the crystals below to add a mystery amount of points to your current score.</p>
-    	<br>
-    	<p>You win the game if your score matches that number from the beginning of the game.</p>
-    	<br>
-    	<p>You lose if your score surpasses the random number.</p>
-    	<br>
-    	<p>Each game starts with a new random number, and different points for the crystals.</p>
-    </div>
-    <div class="target-score">
-    	
-    </div>
-    <div class="W-L">
-    	<h2>Wins: <span id="wins"></span></h2>
-    	<h2>Losses: <span id="losses"></span></h2>
-    	
-    </div>
-    <div class="crystal-space">
+  	<div id="all">
+  		<div id="top-center">
+		    <div class="title">
+		      <h1>Crystals Collector!</h1>    
+		    </div>
+	    </div>
+	    <div class="main-box">
+		    <div class="directions">
+		    	<p>You will be given a random number at the start of the game.</p>
+		    	<br>
+		    	<p>Click one of the crystals below to add a mystery amount of points to your current score.</p>
+		    	<br>
+		    	<p>You win the game if your score matches that number from the beginning of the game.</p>
+		    	<br>
+		    	<p>You lose if your score surpasses the random number.</p>
+		    	<br>
+		    	<p>Each game starts with a new random number, and different points for the crystals.</p>
+		    </div>
+		    <div class="target-space">
+		    	<p>You want this score: <span class="target-score"></span></p>
+		    </div>
+		    <div class="counter-space">
+		    	<p>You have this so far: <span class="score-space"></span></p>
+		    </div>
+		    <div class="W-L">
+		    	<h2>Wins: <span id="wins"></span></h2>
+		    	<h2>Losses: <span id="losses"></span></h2>
+		    	
+		    </div>
+		
+		    <div class="crystal-space">
 
-    </div>
-    <div class="score-space">
-    	
-    </div>
+		    </div>
+		</div>
+	</div>
   </body>
 </html>

@@ -1,20 +1,80 @@
+body {
+	position: relative;
+	background-image: url('../images/calm-back.jpg');
+}
+
+div {
+	margin: 10px;
+	padding: 12px;
+}
+
 .title {
 	color: white;
 	background-color: #eeab6d;
+	font-size: 32px;
+	font-weight: bold;
+	border: 3px ridge #ff9533;
+	text-align: center;
+	width: fit-content;
+	padding: 20px;
+	margin: 0;
+
+}
+
+#top-center {
+	align-content: center;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .directions {
+	background-color: #b1cfdc;
+	font-size: 20px;
+	border: 3px ridge #5cbde7;
+	float: left;
+	width: 45%;
+}
 
+.W-L, .target-space, .counter-space {
+	width: auto;
+	display: inline-block;
+	overflow: none;
+}
+
+.main-box {
+	margin-top: 0;
 }
 
 .W-L {
-
+	color: white;
+	font-size: 32px;
+	font-weight: bold;
+	background-color: #96ccc5;
+	border: 3px ridge #53ccbc;
 }
 
-.target-score {
-
+.target-space, .counter-space {
+	color: #5f4b2c;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.score-space {
-	
+.target-space {
+	background-color: #e4e19e;
+	border: 3px ridge #dfd83e;
+}
+
+.counter-space {
+	background-color: #b1dcbb;
+	border: 3px ridge #85dd99;
+}
+
+.crystal-space {
+	clear: both;
+	border: 5px ridge grey;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
 }

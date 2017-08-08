@@ -2,8 +2,8 @@ $(document).ready(function() {
 	var targetNumber;
 	var counter;
 	var values = [];
-	var wins;
-	var losses;
+	var wins = 0;
+	var losses = 0;
 	
 
 	function readyNumber() {
@@ -12,9 +12,12 @@ $(document).ready(function() {
 		setValues();
 		counter = 0;
 		$(".score-space").html(counter);
+		$("#wins").html(wins);
+		$("#losses").html(losses);
 	};
 
 	function setValues() {
+		$(".crystal-space").empty();
 		for (i = 0; i < 4; i++) {
 			var imageCrystal = $("<img>");
 			values[i] = Math.floor((Math.random() * 12) + 1);
@@ -27,13 +30,20 @@ $(document).ready(function() {
 
 	readyNumber();
 
-	$(".crystal").on("click", function() {
+	$(document).on("click",".crystal",function() {
 		var crystalValue = ($(this).attr("value"));
 		crystalValue = parseInt(crystalValue);
-		console.log(crystalValue);
-		console.log(counter);
 		counter += crystalValue;
 		$(".score-space").html(counter);
+
+		if (counter === targetNumber) {
+			wins++;
+			readyNumber();
+		} 
+		else if (counter > targetNumber) {
+			losses++;			
+			readyNumber();			
+		}
 	});
 
 })	
